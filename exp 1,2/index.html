@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body {
+        background-image: url("back.jpg");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-attachment: fixed;
+    }
+
+    #logo {
+        height: 55px;
+        width: 55px;
+        border-radius: 100%;
+    }
+
+    h1 {
+        display: inline;
+        margin-left: 20px;
+        font-family: 'Calibri';
+    }
+
+    header {
+        height: 80px;
+        width: 100%;
+        top: 0;
+        left: 0;
+        position: fixed;
+        background-image: linear-gradient(to right, rgb(0, 132, 255), rgb(45, 218, 45));
+        justify-content: center;
+        align-items: center;
+        display: flex;
+        z-index: 1;
+    }
+
+    main {
+        position: relative;
+        margin-top: 150px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    label {
+        font-family: 'Calibri';
+        font-size: 22px;
+        display: block;
+        margin-bottom: 8px;
+        font-weight: bold;
+        color: white;
+    }
+
+    input[type=text],
+    select {
+        width: 300px;
+        height: 25px;
+        border-radius: 5px;
+        font-family: 'Calibri';
+    }
+
+    input[type=text]:focus,
+    select:focus {
+        background-color: antiquewhite;
+        outline: none;
+    }
+
+    div {
+        position: relative;
+        margin-bottom: 30px;
+    }
+
+    button,
+    input[type=submit] {
+        color: white;
+        cursor: pointer;
+        width: 130px;
+        height: 35px;
+        background-color: rgb(36, 16, 218);
+        border: none;
+        border-radius: 3px;
+        font-family: 'Calibri';
+    }
+
+    form {
+        margin-bottom: 20px;
+    }
+    body
+    {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    }
+</style>
+
+<body>
+    <header>
+        <img src="./logo.jpg" alt="logo" id="logo">
+        <h1>Rithish Medical Store</h1>
+    </header>
+    <main>
+        <form action="POST">
+            <div>
+                <label for="">
+                    Enter medicine name:
+                </label>
+                <input type="text">
+            </div>
+            <div>
+                <label for="">
+                    Enter the number of pieces:
+                </label>
+                <input type="text">
+            </div>
+            <div>
+                <label for="">
+                    Enter price :
+                </label>
+                <input type="text">
+            </div>
+            <div>
+                <label for="">
+                    Select dosage :
+                </label>
+                <select name="" id="">
+                    <option value="">45mg</option>
+                    <option value="">90mg</option>
+                    <option value="">450mg</option>
+                    <option value="">750mg</option>
+                </select>
+            </div>
+            <div>
+                <input type="submit" value="Submit">
+            </div>
+        </form>
+    </main>
+    <div id="button">
+        <button onclick="addMedicine()" id="add">Add Medicine</button>
+    </div>
+</body>
+<script>
+    function addMedicine() {
+        var main = document.querySelector('main'); 
+        var firstForm = main.querySelector('form'); 
+        var clonedForm = firstForm.cloneNode(true); 
+        main.appendChild(clonedForm);
+    }
+</script>
+
+</html>

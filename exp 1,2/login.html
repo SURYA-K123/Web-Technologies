@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body
+    {
+        font-family: 'Calibri';
+        font-size: 18px;
+        background-image: url("./back1.jpg");
+    }
+    main
+    {
+        height: 80vh;
+        width: 70%;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        display: flex;
+        flex-direction: row;
+        border-radius: 5px;
+        box-shadow: 0 8px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        background-color: white;
+    }
+    #image
+    {
+        position: absolute;
+        width: 50%;
+        height: 100%;
+        left: 0;
+        border-radius: 5px;
+    }
+    img{
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        border-radius: 5px;
+    }
+    #form
+    {
+        position: absolute;
+        right: 0;
+        height: 100%;
+        width: 50%;
+    }
+    form
+    {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+    }
+    input[type="text"], input[type="password"]
+    {
+        border: 2px solid rgba(0, 0, 255, 0.496);
+        margin-top: 10px;
+        height :35px;
+        width :100%;
+        outline: none;
+        transition: 50ms;
+        border-radius: 3px;
+    }
+    input[type="text"]:focus , input[type="password"]:focus
+    {
+        border: 3px solid blue;
+    }
+    label{
+        margin-top: 10px;
+    }
+    input[type="submit"]
+    {
+        color: white;
+        background-color: rgb(71, 88, 222);
+        height: 40px;
+        width: 103%;
+        border: none;
+        margin-top: 15px;
+        border-radius: 3px;
+        cursor: pointer;
+    }
+    a{
+        text-decoration: none;
+        color: blue;
+        cursor: pointer;
+    }
+    #invalid
+    {
+        margin: auto;
+        background-color: red;
+        width: 250px;
+        height: 30px;
+        line-height: 30px;
+        border-radius: 3px;
+        color: white;
+        text-align: center;
+        font-size: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        visibility: hidden;
+    }
+    span
+    {
+        margin-left: 30px;
+        font-size: 25px;
+    }
+</style>
+<body>
+    <div id="invalid">Invalid login Credentials <span>&times;</span></div>
+    <main>
+        <div id="image">
+            <img src="./lo.png" alt="">
+        </div>
+        <div id = "form">
+            <form action="login.php" method="post">
+                <h1>Account Login</h1>
+                <p>If you are already an member login with your email and password</p>
+                <label for="email">Email address</label>
+                <input type="text" name="email" id="email">
+                <label for="password">Password</label>
+                <input type="password" name="password">
+                <input type="submit" value="Register Account" id="password">
+                <p>Don't have an account? <a href="">Sign up here</a></p>
+            </form>
+        </div>
+    </main>
+</body>
+</html>

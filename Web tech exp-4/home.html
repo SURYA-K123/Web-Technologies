@@ -1,0 +1,11 @@
+<div ng-controller="CarouselController">
+    <div class="carousel">
+        <div class="carousel-item" ng-repeat="item in carouselItems" ng-class="{active: $index === currentIndex}">
+            <img ng-src="{{item.imageUrl}}" alt="{{item.caption}}">
+            <div class="carousel-controls">
+                <button ng-click="prev()" class="prev-btn"></button>
+                <button ng-click="next()" class="next-btn"></button>
+            </div>
+        </div>
+    </div>
+</div>
